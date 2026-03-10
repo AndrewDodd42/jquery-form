@@ -926,7 +926,7 @@
 
 				return (doc && doc.documentElement && doc.documentElement.nodeName !== 'parsererror') ? doc : null;
 			};
-			var parseJSON = $.parseJSON || function(s) {
+			var parseJSON = JSON.parse || $.parseJSON || function(s) {
 				// Arise an error resolvable including jquery instead of
 				// making a new function using unsanitized inputs
 				window.console.error('jquery.parseJSON is undefined');
